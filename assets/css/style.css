@@ -19,10 +19,15 @@ img {
 .row {
   display: flex;
   height: 100%;
+  box-shadow: 0 0 10px black;
 }
 
 .filter{
     filter: brightness(0.5);
+}
+
+.active{
+    border: 5px solid lightgray;
 }
 
 .main_img {

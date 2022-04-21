@@ -26,17 +26,17 @@
                 <!-- /.main_img -->
                 <div class="slider_img">
                     <div class="navigator">
-                        <div class="prev">
+                        <div class="prev" @click="prev_img">
                             <i class="fa-solid fa-chevron-circle-up"></i>
                         </div>
                         <!-- /.prev -->
-                        <div class="next">
+                        <div class="next" @click="next_img">
                             <i class="fa-solid fa-chevron-circle-down"></i>
                         </div>
                         <!-- /.next -->
                     </div>
                     <!-- /.navigator -->
-                    <img :src="thumb.image" :class="active_image === index ? '' : 'filter'" v-for="(thumb,index) in locations" alt="">
+                    <img :src="thumb.image" :class="active_image === index ? 'active' : 'filter'" v-for="(thumb,index) in locations" alt="">
                     
                 </div>
                 <!-- /.slider_img -->
