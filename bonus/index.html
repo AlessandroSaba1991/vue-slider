@@ -14,7 +14,7 @@
 
 <body>
 
-    <div id="app">
+    <div id="app" >
         <div class="container">
             <div class="row">
                 <div class="main_img">
@@ -26,7 +26,7 @@
                     <!-- /.text -->
                 </div>
                 <!-- /.main_img -->
-                <div class="slider_img" @mouseenter.stop="">
+                <div class="slider_img" @mouseenter="block" @mouseleave="autoplay">
                     <div class="navigator">
                         <div class="prev" @click="prev_img">
                             <i class="fa-solid fa-chevron-circle-up"></i>

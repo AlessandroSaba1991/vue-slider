@@ -35,6 +35,7 @@ const app = new Vue({
       },
     ],
     active_image: 0,
+    my_intervarl : '',
   },
   methods: {
     prev_img() {
@@ -50,15 +51,16 @@ const app = new Vue({
       }
     },
     autoplay() {
-      const timer = this;
-      setInterval(function () {
-        timer.active_image++;
-        if (timer.active_image === timer.locations.length) {
-          timer.active_image = 0;
+      this.my_interval = setInterval(function () {
+        app.active_image++;
+        if (app.active_image === app.locations.length) {
+          app.active_image = 0;
         }
       }, 3000);
-      
     },
+    block(){
+      clearInterval(this.my_interval)
+    }
   },
   mounted() {
     this.autoplay();
