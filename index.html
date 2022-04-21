@@ -15,11 +15,11 @@
         <div class="container">
             <div class="row">
                 <div class="main_img">
-                    <img src="./assets/img/01.jpg" alt="">
+                    <img :src="locations[active_image].image" alt="">
                     <div class="text">
-                        <h3>Svezia</h3>
+                        <h2>{{locations[active_image].title}}</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut saepe libero autem iure facere. Sint consectetur eveniet illum atque labore incidunt placeat magni est neque veniam quo itaque impedit voluptas quam a natus modi sapiente accusantium, at reprehenderit, eaque voluptates? Rem enim, laborum vel reprehenderit tempora exercitationem corrupti magni a.
+                            {{locations[active_image].text}}
                         </p>
                     </div>
                 </div>
@@ -36,11 +36,8 @@
                         <!-- /.next -->
                     </div>
                     <!-- /.navigator -->
-                    <img src="./assets/img/01.jpg" alt="">
-                    <img class="filter" src="./assets/img/02.jpg" alt="">
-                    <img class="filter" src="./assets/img/03.jpg" alt="">
-                    <img class="filter" src="./assets/img/04.jpg" alt="">
-                    <img class="filter" src="./assets/img/05.jpg" alt="">
+                    <img :src="thumb.image" :class="active_image === index ? '' : 'filter'" v-for="(thumb,index) in locations" alt="">
+                    
                 </div>
                 <!-- /.slider_img -->
             </div>

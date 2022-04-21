@@ -62,4 +62,5 @@ img {
   padding: 1rem 0;
   color: white;
   font-size: 30px;
+  z-index: 1;
 }
