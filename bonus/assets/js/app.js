@@ -49,5 +49,18 @@ const app = new Vue({
         this.active_image = 0;
       }
     },
+    autoplay() {
+      const timer = this;
+      setInterval(function () {
+        timer.active_image++;
+        if (timer.active_image === timer.locations.length) {
+          timer.active_image = 0;
+        }
+      }, 3000);
+      
+    },
+  },
+  mounted() {
+    this.autoplay();
   },
 });

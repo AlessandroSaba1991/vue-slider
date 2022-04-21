@@ -15,7 +15,6 @@
 <body>
 
     <div id="app">
-
         <div class="container">
             <div class="row">
                 <div class="main_img">
@@ -27,7 +26,7 @@
                     <!-- /.text -->
                 </div>
                 <!-- /.main_img -->
-                <div class="slider_img">
+                <div class="slider_img" @mouseenter.stop="">
                     <div class="navigator">
                         <div class="prev" @click="prev_img">
                             <i class="fa-solid fa-chevron-circle-up"></i>
@@ -40,7 +39,7 @@
                     </div>
                     <!-- /.navigator -->
                     <img :src="thumb.image" :class="active_image === index ? 'active' : 'filter'"
-                        v-for="(thumb,index) in locations" @click="active_image = index" alt="">
+                    v-for="(thumb,index) in locations" @click="active_image = index" alt="">
                 </div>
                 <!-- /.slider_img -->
             </div>
@@ -48,10 +47,11 @@
         </div>
         <!-- /.container -->
     </div>
-
-
-
-
+   
+    
+    
+    
+    
     <script src='https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js'></script>
     <script src="./assets/js/app.js"></script>
 </body>
