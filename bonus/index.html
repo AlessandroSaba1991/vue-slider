@@ -40,7 +40,7 @@
                     </div>
                     <!-- /.navigator -->
                     <img :src="thumb.image" :class="active_image === index ? 'active' : 'filter'"
-                        v-for="(thumb,index) in locations" alt="">
+                        v-for="(thumb,index) in locations" @click="active_image = index" alt="">
                 </div>
                 <!-- /.slider_img -->
             </div>
